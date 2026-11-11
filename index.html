@@ -1,0 +1,14 @@
+<h1>ShadowWatch - Premium</h1>
+<p>Upgrade to ShadowWatch Premium for Safe Escort Alerts - $1.00 (Sandbox Test)</p>
+<div id="paypal-button-container"></div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+<script>
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    return actions.order.create({
+      purchase_units: [{ amount: { value: '1.00' } }]
+    });
+  }
+}).render('#paypal-button-container');
+</script>
